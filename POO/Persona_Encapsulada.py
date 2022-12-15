@@ -18,15 +18,39 @@ class Persona_Encapsulada():
     def nombre(self,nombre):
         self._nombre = nombre
 
+    @property
+    def apellido(self):
+        return self._apellido
+
+    @apellido.setter
+    def apellido(self,apellido):
+        self._apellido = apellido
+
+    @property
+    def edad(self):
+        return self._edad
+
+    @edad.setter
+    def edad(self,edad):
+        self._edad = edad
+
+
     def mostrar_detalle(self):
-        print(f'Persona: {self._nombre} {self._apellido} {self._edad}')
+            print(f'Persona: {self._nombre} {self._apellido} {self._edad}')
 
-persona1 = Persona_Encapsulada('Pepe','Suertudo',30)
-#recupera por getter y no por atributo _nombre.
-print(f'Objeto 1. {persona1.nombre}')
-print(persona1.nombre)
+#
+#
+# persona1 = Persona_Encapsulada('Pepe','Suertudo',30)
+# #recupera por getter y no por atributo _nombre.
+# print(f'Objeto 1. {persona1.nombre},{persona1.apellido},{persona1.edad}')
+# print(persona1.nombre)
+#
+# #utilizando el setter para modificar atributo
+# persona1.nombre = 'Juan'
+# persona1.apellido = 'Pringamoso'
+# persona1.edad = 50
+#
+# print(f'Objeto 1 modificado: {persona1.nombre},{persona1.apellido},{persona1.edad}')
 
-#utilizando el setter para modificar atributo
-persona1.nombre = 'Juan'
-print(f'Objeto 1 modificado: {persona1.nombre}')
+
 
