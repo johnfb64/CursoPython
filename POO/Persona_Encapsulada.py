@@ -38,6 +38,10 @@ class Persona_Encapsulada():
     def mostrar_detalle(self):
             print(f'Persona: {self._nombre} {self._apellido} {self._edad}')
 
+    #Metodo para eliminar objetos __del__, esto eliminara atributos nombre y apellido. Esto libera recursos.
+    def __del__(self):
+        print(f'Persona: {self._nombre} {self._apellido}')
+
 #
 #
 # persona1 = Persona_Encapsulada('Pepe','Suertudo',30)
